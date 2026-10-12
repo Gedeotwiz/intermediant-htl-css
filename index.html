@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Svg icon $ table data</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./responsive/index.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                 <p>A simple list of products with details and stock status</p>
             </div>
             <button>
-                Add product
+                + Add product
             </button>
         </hgroup>
         <section>
@@ -44,42 +45,58 @@
                 <thead>
                     <tr>
                         <th>
-                            <svg width="18" height="18" margin-top="2px" viewBox="0 0 24 24" fill="green" stroke="green"
-                                stroke-width="2">
-                                <path
-                                    d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
-                                <line x1="7" y1="7" x2="7.01" y2="7" />
-                            </svg>
-                            Products
+                            <span class="title">
+                                <svg width="18" height="18" margin-top="2px" viewBox="0 0 24 24" fill="green"
+                                    stroke="green" stroke-width="2">
+                                    <path
+                                        d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                                    <line x1="7" y1="7" x2="7.01" y2="7" />
+                                </svg>
+                                Products
+                            </span>
                         </th>
                         <th>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="yellow" stroke="brown"
-                                stroke-width="2">
-                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
-                            </svg>
-                            Category
+                            <span class="title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="yellow" stroke="brown"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                                </svg>
+                                Category
+                            </span>
+
                         </th>
                         <th>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2">
-                                <line x1="12" y1="1" x2="12" y2="23" />
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                            </svg>
-                            $Price
+                            <span class="title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="blue"
+                                    stroke-width="2">
+                                    <line x1="12" y1="1" x2="12" y2="23" />
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                </svg>
+                                $Price
+                            </span>
+
                         </th>
                         <th>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="orange"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                                <path d="M22 4L12 14.01l-3-3" />
-                            </svg>
-                            Status
+                            <span class="title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="orange"
+                                    stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <path d="M22 4L12 14.01l-3-3" />
+                                </svg>
+                                Status
+                            </span>
+
                         </th>
                         <th>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="green"
-                                stroke-width="2">
-                                <path d="M2 7h20M2 12h20M6 3v4M18 3v4M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" />
-                            </svg>
-                            Stock
+                            <span class="title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="green"
+                                    stroke-width="2">
+                                    <path d="M2 7h20M2 12h20M6 3v4M18 3v4M4 7v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7" />
+                                </svg>
+                                Stock
+                            </span>
+
                         </th>
                     </tr>
                 </thead>
@@ -88,28 +105,28 @@
                         <td>Wireless Headphones</td>
                         <td>Electrinics</td>
                         <td>8900</td>
-                        <td>In stock</td>
+                        <td> <span class="instock">In stock</span></td>
                         <td>42</td>
                     </tr>
                     <tr>
                         <td>Cotn T-Shirt</td>
                         <td>Apparel</td>
                         <td>24.45</td>
-                        <td>Low stock</td>
+                        <td><span class="lowstock">Low stock</span></td>
                         <td>7</td>
                     </tr>
                     <tr>
                         <td>Ceramic Mug</td>
                         <td>Home $ Kitchen</td>
                         <td>12.3</td>
-                        <td>In stock</td>
+                        <td> <span class="instock">In stock</span></td>
                         <td>120</td>
                     </tr>
                     <tr>
                         <td>Notbook</td>
                         <td>Stationery</td>
                         <td>5.25</td>
-                        <td>Out of stock</td>
+                        <td><span class="out">Out of stock</span></td>
                         <td>0</td>
                     </tr>
                 </tbody>

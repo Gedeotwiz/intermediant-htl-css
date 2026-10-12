@@ -16,13 +16,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 20px 50px;
 }
 
 header h1 {
     font-size: 20px;
     font-weight: bold;
-    color: #09193e;
+    color: rgb(11, 11, 114);
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(8, 8, 56);
+    padding-bottom: 5px;
 }
 
 ul {
@@ -36,6 +43,10 @@ li {
     list-style: none;
 }
 
+li:hover {
+    color: rgb(11, 11, 114);
+}
+
 li a {
     text-decoration: none;
     color: gray;
@@ -44,16 +55,31 @@ li a {
     align-items: center;
 }
 
+.title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px
+}
 
 main {
-    padding: 10px 30px;
+    padding: 10px 50px;
 }
 
 hgroup {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
+}
+
+hgroup button {
+    padding: 3px 10px;
+    font-size: 16px;
+    border: 2px rgb(11, 11, 114) solid;
+    background-color: rgba(0, 0, 255, 0.377);
+    color: white;
+    border-radius: 4px;
 }
 
 table {
@@ -84,8 +110,32 @@ tbody tr:hover {
 }
 
 td {
-    padding: 16px 20px;
+    padding: 16px 25px;
     border-top: 1px solid #e2e8f0;
     font-size: 15px;
     color: #0f172a;
+}
+
+.instock {
+    background-color: rgba(3, 235, 3, 0.271);
+    color: green;
+    padding: 2.3px 8px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.lowstock {
+    background-color: rgba(255, 166, 0, 0.349);
+    color: orange;
+    padding: 2.3px 8px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.out {
+    background-color: rgba(255, 0, 0, 0.209);
+    color: red;
+    padding: 2.3px 8px;
+    border-radius: 10px;
+    font-size: 13px;
 }

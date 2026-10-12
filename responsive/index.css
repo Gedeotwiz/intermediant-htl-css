@@ -1,0 +1,70 @@
+@media (max-width:783px) {
+    td {
+        padding: 16px 15px;
+        border-top: 1px solid #e2e8f0;
+        font-size: 15px;
+        color: #0f172a;
+    }
+
+    .instock {
+        background-color: rgba(3, 235, 3, 0.271);
+        color: green;
+        padding: 2px 4px;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+
+    .lowstock {
+        background-color: rgba(255, 166, 0, 0.349);
+        color: orange;
+        padding: 2px 4px;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+
+    .out {
+        background-color: rgba(255, 0, 0, 0.209);
+        color: red;
+        padding: 2px 4px;
+        border-radius: 10px;
+        font-size: 10px;
+    }
+}
+
+@media(max-width:665px) {
+    main {
+        padding: 10px 15px;
+    }
+
+    header {
+        background-color: white;
+        box-shadow: 2px 2px 2px 2px white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section {
+        overflow-x: auto;
+        scrollbar-width: 2px;
+    }
+
+    hgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+    }
+
+    hgroup div p {
+        width: 100%;
+    }
+}
