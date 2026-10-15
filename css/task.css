@@ -13,17 +13,26 @@ body {
 
 header {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
     padding: 35px 0;
 }
 
-header h1 {
-    font-size: 24px;
+header div {
+    width: clamp(600px, 100%, 1200px);
+}
+
+header div h1 {
+    font-size: 30px;
     color: rgb(19, 8, 54);
     font-weight: bold;
+    padding-bottom: 10px;
+}
+
+header div p {
+    color: gray;
+    font-size: 16px;
+    padding-left: 2px;
 }
 
 
@@ -126,4 +135,14 @@ tbody tr td:last-child button {
 tbody tr:nth-child(even) td button {
     background-color: rgb(9, 9, 88);
     color: white;
+}
+
+tbody tr td:nth-child(5) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody tr td:nth-child(5) div p {
+    font-weight: bold;
 }

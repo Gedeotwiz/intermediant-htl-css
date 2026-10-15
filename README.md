@@ -20,7 +20,7 @@ Other method to run it click to this link [click here =>](https://gedeotwiz.gith
 
 ![Screenshot description](./images/table.png)
 
-![Screenshot description](./images/task.png)
+![Screenshot description](./images/Screenshot%20From%202026-10-15%2006-51-23.png)
 
 
 ## Contributor
