@@ -1,0 +1,87 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeee;
+    font-family: Arial, sans-serif;
+    padding: 10vh 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+header div {
+    width: clamp(600px, 100%, 1200px);
+}
+
+header div h1 {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: clamp(16px, 2vw, 24px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+table {
+    width: clamp(600px, 100%, 1200px);
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px white;
+}
+
+thead tr {
+    background-color: black;
+
+}
+
+thead>tr>th {
+    color: aliceblue;
+    padding: 16px;
+    text-align: left;
+    font-size: clamp(10px, 2vw, 20px);
+}
+
+tbody {
+    background-color: white;
+    box-shadow: 2px 2px 2px whitesmoke;
+    border-radius: 10px;
+}
+
+tbody tr td {
+    padding: 16px;
+    font-size: clamp(10px, 2vw, 16px);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #79cd9d31;
+}
+
+tbody tr:hover {
+    background-color: rgba(216, 230, 231, 0.462);
+}
+
+tbody tr td:nth-child(1) {
+    font-weight: bold;
+}
+
+tbody tr td:nth-child(2) {
+    color: rgb(2, 122, 94);
+    font-weight: 700;
+}
