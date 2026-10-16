@@ -128,6 +128,11 @@ textarea:valid {
     background-color: white;
 }
 
+.error {
+    display: none;
+    color: red;
+}
+
 
 main form input:user-invalid,
 main form select:user-invalid,
@@ -135,8 +140,28 @@ main form textarea:user-invalid {
     border-color: red;
 }
 
+
+main form input:user-invalid+.error,
+main form select:user-invalid+.error,
+main form textarea:user-invalid+.error {
+    display: block;
+}
+
 main form input:user-valid,
 main form select:user-valid,
 main form textarea:user-valid {
     border-color: green;
+}
+
+textarea:user-invalid:placeholder-shown+.error-required {
+    display: block;
+}
+
+
+textarea:user-invalid:not(:placeholder-shown)+.error-required {
+    display: none;
+}
+
+textarea:user-invalid:not(:placeholder-shown)+.error-required~.error-minlength {
+    display: block;
 }
