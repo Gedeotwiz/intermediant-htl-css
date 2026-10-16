@@ -21,11 +21,13 @@
                 <label for="names">
                     Full Name <span class="required">*</span>
                     <input name="names" id="names" type="text" placeholder="Your full name" required>
+                    <small class="error">Your name is required please enter your names!</small>
                 </label>
 
                 <label for="email">
                     Email Address <span class="required">*</span>
                     <input type='email' name="email" id="email" placeholder="you@gmail.com" required>
+                    <small class="error">Please enter valid email including @ symbols</small>
                 </label>
 
                 <label for="subject">
@@ -42,6 +44,7 @@
                     Message <span class="required">*</span>
                     <textarea name="message" id="message" minlength="20" maxlength="60"
                         placeholder="Write your message here..." required></textarea>
+                    <small class="error">Your message must be between 20 and 60 characters long.</small>
                 </label>
 
                 <button type="submit"><i>Send Message</i></button>
