@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 40px 10px 0 0;
+}
+
+header h1 {
+    color: rgb(4, 80, 115);
+    text-align: center;
+}
+
+header p {
+    width: clamp(0px, 100%, 430px);
+    font-size: 18px;
+    color: rgba(3, 99, 143, 0.8);
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+main form {
+    width: clamp(0px, 100%, 550px);
+    border: 1px solid rgba(3, 99, 143, 0.514);
+    padding: 20px;
+    border-radius: 7px;
+}
+
+#form-Container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main form label {
+    color: rgb(4, 80, 115);
+    font-size: 15px;
+}
+
+main form input,
+main form select,
+main form textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid rgba(3, 99, 143, 0.514);
+    border-radius: 5px;
+    outline: none;
+    font: inherit;
+    background-color: transparent;
+    margin-top: 5px;
+}
+
+main form input:focus,
+main form select:focus,
+main form textarea:focus {
+    border-color: rgb(4, 80, 115);
+    box-shadow: 0 0 4px rgba(3, 99, 143, 0.3);
+}
+
+main form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.required {
+    color: red;
+}
+
+main form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(4, 80, 115);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main form button:hover {
+    background-color: rgb(3, 62, 90);
+}
+
+main form button i {
+    font-style: normal;
+}
+
+@media (max-width: 350px) {
+    main form {
+        padding: 12px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+}
+
+input:valid,
+textarea:valid {
+    background-color: white;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+
+main form input:user-invalid,
+main form select:user-invalid,
+main form textarea:user-invalid {
+    border-color: red;
+}
+
+
+main form input:user-invalid+.error,
+main form select:user-invalid+.error,
+main form textarea:user-invalid+.error {
+    display: block;
+}
+
+main form input:user-valid,
+main form select:user-valid,
+main form textarea:user-valid {
+    border-color: green;
+}
+
+textarea:user-invalid:placeholder-shown+.error-required {
+    display: block;
+}
+
+
+textarea:user-invalid:not(:placeholder-shown)+.error-required {
+    display: none;
+}
+
+textarea:user-invalid:not(:placeholder-shown)+.error-required~.error-minlength {
+    display: block;
+}
