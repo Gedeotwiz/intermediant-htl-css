@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <aside>
+            <div>
+                <div>
+                    <h1>G</h1>
+                </div>
+                <h1>ADMIN</h1>
+            </div>
+            <ul class="menu">
+                <li class="active" data-page="dashboard">☐ Dashboard</li>
+                <li data-page="todos">☐ Todos</li>
+                <li data-page="projects">☐ Projects</li>
+                <li data-page="settings">⚙ Settings</li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <div id="dashboard" class="page active">
+                <header>
+                    <h1>Todo Dashboard</h1>
+                    <div class="user">
+                        <button>New Todo</button>
+                        <div>
+                            ◉ User
+                        </div>
+
+                    </div>
+                </header>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <p>Total Todos</p>
+                        <h2>6</h2>
+                    </div>
+                    <div class="stat-card">
+                        <p>Completed</p>
+                        <h2>2</h2>
+                    </div>
+                    <div class="stat-card">
+                        <p>Pending</p>
+                        <h2>4</h2>
+                    </div>
+                </div>
+
+                <div class="board">
+                    <div>
+                        <div class="col-header">
+                            <h3>To Do</h3><span class="badge">3</span>
+                        </div>
+                        <div class="task"><input type="checkbox"> Design homepage layout</div>
+                        <div class="task"><input type="checkbox"> Write content draft</div>
+                        <div class="task"><input type="checkbox"> Gather assets</div>
+                    </div>
+                    <div>
+                        <div class="col-header">
+                            <h3>In Progress</h3><span class="badge">2</span>
+                        </div>
+                        <div class="task"><input type="checkbox" checked> Develop header component <span
+                                class="tag progress">In progress</span></div>
+                        <div class="task"><input type="checkbox" checked> Style the fotor section</div>
+                    </div>
+                    <div>
+                        <div class="col-header">
+                            <h3>Done</h3><span class="badge">1</span>
+                        </div>
+                        <div class="task"><input type="checkbox" checked> Setup project repo <span
+                                class="tag done">Done</span></div>
+                        <div class="task"><input type="checkbox" checked> Create wireframe sketch</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER PAGES -->
+            <div id="todos" class="page">
+                <div class="header">
+                    <h1>Todos</h1>
+                    <div class="user">◉ User</div>
+                </div>
+                <div class="welcome-box">
+                    <h2>Welcome to Todos page</h2>
+                    <p>Here you will manage all your todos with filters and search.</p>
+                </div>
+            </div>
+
+            <div id="projects" class="page">
+                <div class="header">
+                    <h1>Projects</h1>
+                    <div class="user">◉ User</div>
+                </div>
+                <div class="welcome-box">
+                    <h2>Welcome to Projects page</h2>
+                    <p>Here you will see all projects and their progress.</p>
+                </div>
+            </div>
+
+            <div id="settings" class="page">
+                <div class="header">
+                    <h1>Settings</h1>
+                    <div class="user">◉ User</div>
+                </div>
+                <div class="welcome-box">
+                    <h2>Welcome to Settings page</h2>
+                    <p>Here you will update profile and preferences.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu li');
+        const pages = document.querySelectorAll('.page');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const target = item.dataset.page;
+                pages.forEach(p => p.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
+</html>
