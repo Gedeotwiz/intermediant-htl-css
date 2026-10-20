@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="../css/contactForm.css">
+</head>
+
+<body>
+    <header>
+        <h1>Get In Touch</h1>
+        <p>Have a question, suggetion or just want to say hello ? Fill out this form below and we'll get back to you
+            soon.</p>
+    </header>
+
+    <main>
+        <form action="" method="post">
+            <div id="form-Container">
+                <label for="names">
+                    Full Name <span class="required">*</span>
+                    <input name="names" id="names" type="text" placeholder="Your full name" required>
+                    <small class="error">Your name is required please enter your names!</small>
+                </label>
+
+                <label for="email">
+                    Email Address <span class="required">*</span>
+                    <input type='email' name="email" id="email" placeholder="you@gmail.com" required>
+                    <small class="error">Please enter valid email including @ symbols</small>
+                </label>
+
+                <label for="subject">
+                    Subject <span class="required">*</span>
+                    <select name="subject" id="subject" required>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option value="hello">Say hello</option>
+                        <option value="help">Need help?</option>
+                        <option value="suggestions">Have suggestions?</option>
+                    </select>
+                </label>
+
+                <label for="message">
+                    Message <span class="required">*</span>
+                    <textarea name="message" id="message" minlength="20" maxlength="60"
+                        placeholder="Write your message here..." required></textarea>
+                    <small class="error">Your message must be between 20 and 60 characters long.</small>
+                </label>
+
+                <button type="submit"><i>Send Message</i></button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

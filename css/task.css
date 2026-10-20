@@ -19,6 +19,10 @@ header {
     padding: 0 10px;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 header div {
     width: clamp(600px, 100%, 1200px);
 }
