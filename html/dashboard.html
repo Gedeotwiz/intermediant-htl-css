@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <aside>
+            <div>
+                <div>
+                    <div>
+                        <h1>G</h1>
+                    </div>
+                    <h1>ADMIN</h1>
+                </div>
+                <div class="menu-icon">
+                    <span class="close">
+                        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </span>
+                    <span class="open">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 6h18" />
+                            <path d="M3 12h18" />
+                            <path d="M3 18h18" />
+                        </svg>
+                    </span>
+                </div>
+
+            </div>
+            <ul class="menu">
+                <li class="active" data-page="dashboard">☐ Dashboard</li>
+                <li data-page="todos">☐ Todos</li>
+                <li data-page="projects">☐ Projects</li>
+                <li data-page="settings">⚙ Settings</li>
+            </ul>
+        </aside>
+
+        <main>
+
+            <div id="dashboard" class="page active">
+                <header>
+                    <h1>Todo Dashboard</h1>
+                    <div class="user">
+
+                        <div>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="8.5" cy="7" r="4" />
+                            </svg>
+                            User
+                        </div>
+                        <button>New Todo</button>
+
+                    </div>
+                </header>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <p>Total Todos</p>
+                        <h2>6</h2>
+                    </div>
+                    <div class="stat-card">
+                        <p>Completed</p>
+                        <h2>2</h2>
+                    </div>
+                    <div class="stat-card">
+                        <p>Pending</p>
+                        <h2>4</h2>
+                    </div>
+                </div>
+
+                <div class="board">
+                    <div>
+                        <div class="col-header">
+                            <h3>To Do</h3><span class="badge">3</span>
+                        </div>
+                        <div><input type="checkbox"> Design homepage layout</div>
+                        <div><input type="checkbox"> Write content draft</div>
+                        <div><input type="checkbox"> Gather assets</div>
+                    </div>
+                    <div>
+                        <div class="col-header">
+                            <h3>In Progress</h3><span class="badge">2</span>
+                        </div>
+                        <div class="pro">
+                            <div>
+                                <input type="checkbox" checked> Develop header component
+                            </div>
+                            <span class="tag progress">In progress</span>
+                        </div>
+                        <div><input type="checkbox" checked> Style the fotor section</div>
+                    </div>
+                    <div>
+                        <div class="col-header">
+                            <h3>Done</h3><span class="badge">1</span>
+                        </div>
+                        <div class="pro">
+                            <div>
+                                <input type="checkbox" checked> Setup project repo
+                            </div> <span class="tag done">Done</span>
+                        </div>
+                        <div><input type="checkbox" checked> Create wireframe sketch</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="todos" class="page">
+                <header>
+                    <h1>Todos</h1>
+                    <div class="user">
+
+                        <div>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="8.5" cy="7" r="4" />
+                            </svg>
+                            User
+                        </div>
+                        <button>New Todo</button>
+                    </div>
+                </header>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Priority</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th colspan="2">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"> Design homepage layout
+                                </td>
+                                <td>HIGH</td>
+                                <td>Oct 22,226</td>
+                                <td>In progress</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"> Write content draft
+                                </td>
+                                <td>MEDIUM</td>
+                                <td>Oct 22,226</td>
+                                <td>In progress</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"> Gather assets
+                                </td>
+                                <td>LOW</td>
+                                <td>Oct 20,226</td>
+                                <td>Completed</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"> Develop header component
+                                </td>
+                                <td>HIGH</td>
+                                <td>Oct 16,226</td>
+                                <td>In progrss</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox"> Setup project repo
+                                </td>
+                                <td>LOW</td>
+                                <td>Oct 16,226</td>
+                                <td>Completed</td>
+                                <td>Edit</td>
+                                <td>Delete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <p>Preview</p>
+                    <p class="active">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>Next</p>
+                </div>
+            </div>
+
+            <div id="projects" class="page">
+                <header>
+                    <h1>Projects</h1>
+                    <div class="user">
+
+                        <div>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="8.5" cy="7" r="4" />
+                            </svg>
+                            User
+                        </div>
+                        <button>New Project</button>
+
+                    </div>
+                </header>
+                <div class="welcome-box">
+                    <div class="grid-container">
+                        <div class="project-card">
+                            <div class="card-header">
+                                <h3>Website Redesign</h3>
+                                <span class="badge dec">Design</span>
+                            </div>
+
+                            <p class="description">
+                                Revamp company website with new branding and responsive layout
+                            </p>
+
+                            <div class="progress-top">
+                                <span>Progress <strong>68%</strong></span>
+                                <span class="progress-percent">68%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="avatars">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                    <div class="more">+1</div>
+                                </div>
+
+                                <div class="due">
+                                    📅 Due Oct 8, 2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-header">
+                                <h3>Mobile App Lauch</h3>
+                                <span class="badge dev">Development</span>
+                            </div>
+
+                            <p class="description">
+                                IOS and android all lauch fo q4 release
+                            </p>
+
+                            <div class="progress-top">
+                                <span>Progress <strong>80%</strong></span>
+                                <span class="progress-percent">80%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill eight"></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="avatars">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                    <div class="more">+2</div>
+                                </div>
+
+                                <div class="due">
+                                    📅 Due Nov 2, 2026
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-header">
+                                <h3>Brand Cgmpaign</h3>
+                                <span class="badge mac">Marketing</span>
+                            </div>
+
+                            <p class="description">
+                                Social media campaign for product launch
+                            </p>
+
+                            <div class="progress-top">
+                                <span>Progress <strong>45%</strong></span>
+                                <span class="progress-percent">45%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill four"></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="avatars">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                    <div class="more">+4</div>
+                                </div>
+
+                                <div class="due">
+                                    📅 Due Oct 8, 2026
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-header">
+                                <h3>Data Migration</h3>
+                                <span class="badge bac">Backend</span>
+                            </div>
+
+                            <p class="description">
+                                Migrate legancy data to new cloud infrastructure
+                            </p>
+
+                            <div class="progress-top">
+                                <span>Progress <strong>92%</strong></span>
+                                <span class="progress-percent">92%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill nine"></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="avatars">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                    <div class="more">+1</div>
+                                </div>
+
+                                <div class="due">
+                                    📅 Due Oct 8, 2024
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="card-header">
+                                <h3>Customer Port</h3>
+                                <span class="badge dec">Design</span>
+                            </div>
+
+                            <p class="description">
+                                Build seft-service portal for cunstomer support
+                            </p>
+
+                            <div class="progress-top">
+                                <span>Progress <strong>30%</strong></span>
+                                <span class="progress-percent">30%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill three"></div>
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="avatars">
+                                    <img src="https://i.pravatar.cc/100?img=1" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                                    <img src="https://i.pravatar.cc/100?img=3" alt="">
+                                    <div class="more">+5</div>
+                                </div>
+
+                                <div class="due">
+                                    📅 Due Oct 8, 2024
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pagination">
+                        <p>Preview</p>
+                        <p class="active">1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>Next</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings" class="page">
+                <header>
+                    <h1>Settings</h1>
+                    <div class="user">
+
+                        <div>
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="8.5" cy="7" r="4" />
+                            </svg>
+                            User
+                        </div>
+                    </div>
+                </header>
+                <div class="welcome-box">
+                    <h2>Welcome to Settings page</h2>
+                    <p>Here you will update profile and preferences.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu li');
+        const pages = document.querySelectorAll('.page');
+        const toggleOpen = document.querySelector(".open")
+        const togleClose = document.querySelector(".close")
+        const nav = document.querySelector(".menu")
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                const target = item.dataset.page;
+                pages.forEach(p => p.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        nav.style.display = "block";
+        toggleOpen.style.display = "none";
+        togleClose.style.display = "inline";
+
+
+        toggleOpen.addEventListener("click", function () {
+            nav.style.display = "block";
+            toggleOpen.style.display = "none";
+            togleClose.style.display = "inline";
+        });
+
+
+        togleClose.addEventListener("click", function () {
+            nav.style.display = "none";
+            togleClose.style.display = "none";
+            toggleOpen.style.display = "inline";
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+</html>

@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <form action="" method="post">
+        <form action="" method="">
             <div id="form-Container">
                 <label for="names">
                     Full Name <span class="required">*</span>
@@ -26,7 +26,9 @@
 
                 <label for="email">
                     Email Address <span class="required">*</span>
-                    <input type='email' name="email" id="email" placeholder="you@gmail.com" required>
+                    <input type="email" name="email" id="email" placeholder="you@gmail.com"
+                        pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
+                        title="Please enter a valid Gmail address, such as example@gmail.com" required>
                     <small class="error">Please enter valid email including @ symbols</small>
                 </label>
 
@@ -51,6 +53,38 @@
             </div>
         </form>
     </main>
+    <script>
+        const form = document.querySelector("form");
+
+        const fields = form.querySelectorAll("input, select, textarea");
+
+
+        fields.forEach((field) => {
+            const savedValue = localStorage.getItem(field.name);
+
+            if (savedValue !== null) {
+                field.value = savedValue;
+            }
+        });
+
+        fields.forEach((field) => {
+            field.addEventListener("input", saveField);
+            field.addEventListener("change", saveField);
+        });
+
+        function saveField(event) {
+            localStorage.setItem(
+                event.target.name,
+                event.target.value
+            );
+        }
+
+        form.addEventListener("submit", () => {
+            fields.forEach((field) => {
+                localStorage.removeItem(field.name);
+            });
+        });
+    </script>
 </body>
 
 </html>
