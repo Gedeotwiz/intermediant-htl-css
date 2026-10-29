@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+main {
+    width: min(100%, 400px);
+    padding: 25px;
+    text-align: center;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px #00000015;
+}
+
+h1 {
+    margin-bottom: 16px;
+    color: #142b40;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #055a76;
+}
+
+main div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+main div button {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 10px;
+    background-color: #e8eef3;
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    font-weight: bold;
+    color: #142b40;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main div button:hover:empty {
+    background-color: #d5e2eb;
+}
+
+main button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #055a76;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: #03445a;
+}
+
+main button:focus-visible,
+main button:focus-visible {
+    outline: 3px solid #d9a106;
+    outline-offset: 3px;
+}
