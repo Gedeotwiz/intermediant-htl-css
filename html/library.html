@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LIBRARY</title>
+    <link rel="stylesheet" href="../css/library.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>My Library</h1>
+            </div>
+            <button class="add-book">+ New Book</button>
+        </nav>
+
+        <div>
+            <div>
+                <h3>My Books</h3>
+                <p>Manage your collection of books. Add new books, mark them as read or unread, and remove them from
+                    library.</p>
+            </div>
+            <div>
+                <input type="text" id="search" placeholder="Seach by title or author...">
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="my-books">
+            
+        </div>
+
+
+        <form id="book-form" action="" method="">
+
+            <div class="form-herder">
+                <h1>Add New Book</h1>
+                <span class="close">
+                    <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </span>
+            </div>
+            <div id="form-Container">
+                <label for="title">
+                    Title <span class="required">*</span>
+                    <input name="title" id="title" type="text" placeholder="Enter book title" required>
+                    <small class="error">Book title is required</small>
+                </label>
+
+                <label for="author">
+                    Author <span class="required">*</span>
+                    <input type="text" name="author" id="author" placeholder="Enter author name" required>
+                    <small class="error">Author names in required</small>
+                </label>
+
+                <label for="page">
+                    Page Count <span class="required">*</span>
+                    <input type="number" name="page" id="page" placeholder="Enter number of pages" min="1" step="1"
+                        required>
+                    <small class="error">Count the number of pages</small>
+                </label>
+
+                <div class="image-section">
+                    <label for="book-image">
+                        Book Cover <span id="optional">(optional)</span>
+                        <input type="file" id="book-image" name="bookImage" accept="image/*">
+                    </label>
+                    <label for="book-file">
+                        Upload Book (PDF) <span class="required">*</span>
+                        <input type="file" id="book-file" accept="application/pdf,.pdf" required>
+                    </label>
+
+                    <div class="image-preview">
+                        <img id="image-preview" src="../images/book.png" alt="Book cover preview">
+                    </div>
+                </div>
+
+                <div class="read-status-option">
+                    <p class="status-title">Read Status</p>
+
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="readStatus" id="read" value="Read" checked>
+                            <span>Read</span>
+                        </label>
+
+                        <label class="radio-label">
+                            <input type="radio" name="readStatus" id="not-read" value="Not Read">
+                            <span>Not Read</span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <label for="note">
+                    Additional Notes <span id="optional">(optional)</span>
+                    <textarea name="note" id="note" maxlength="60" placeholder="Any additional notes"></textarea>
+                </label>
+                <div class="form-button">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit">Add Book</button>
+                </div>
+
+
+            </div>
+        </form>
+    </main>
+    <script src="../javascript/library.js"></script>
+</body>
+
+</html>
