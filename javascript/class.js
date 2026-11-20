@@ -42,59 +42,7 @@ student2.displayInfo()
 student2.isStudy()
 
 
+
 class calculator{
-    constructor(a,b){
-        this.a = a
-        this.b = b
-    }
-
-    add(){
-        return this.a + this.b
-    }
-
-    subtract(){
-        return this.b - this.a
-    }
-
-    multiply (){
-        return this.a * this.b
-    }
-
-    devide(){
-        return this.a / this.b
-    }
+    constructor(a,b){}
 }
-
-const number = new calculator(30,50)
-
-console.log(calculator.add)
-console.log(calculator.subtract)
-console.log(calculator.multiply)
-console.log(calculator.devide)
-
-
-
-class Employee{
-   constructor(name, salary){
-      this.name = name
-      this.salary = salary
-   }
-
-   get employeeInfo(){
-     return `Employee name is ${this.name} and thier salary of ${this.salary}`
-   }
-
-   set updateSalary(newSalary){
-    if(newSalary < 0) {
-        return 'Salary cannot be negative.'
-    }else{
-        this.salary = newSalary
-    }
-   }
-}
-
-const newEmployee = new Employee ("Dusengimana",300000)
-
-console.log(newEmployee.employeeInfo)
-
-console.log(newEmployee.updateSalary = 6000000)
