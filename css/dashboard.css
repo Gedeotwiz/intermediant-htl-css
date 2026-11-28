@@ -418,9 +418,11 @@ tbody tr td:nth-child(6) {
 .project-card {
     background: white;
     border-radius: 12px;
+
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     border: 1px solid #eee;
+    border-left: 6px yellow solid;
 }
 
 .card-header {
